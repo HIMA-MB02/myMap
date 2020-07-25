@@ -1,8 +1,9 @@
 import axios from 'axios';
 
+const URL = `http://localhost:3000`;
+
 export const getListOfRoutes = () => {
-	const URL = `http://localhost:3000/get-routes`;
-	return axios(URL, {
+	return axios(URL + '/get-routes', {
 		method: 'GET',
 		headers: {
 			'content-type': 'application/json',
@@ -14,9 +15,8 @@ export const getListOfRoutes = () => {
 	});
 };
 
-export const sendGeneratedRoute = (data) => {
-	const URL = `http://localhost:3000/insert-routes`;
-	return axios(URL, {
+export const sendGeneratedRoute = data => {
+	return axios(URL + `/insert-routes`, {
 		method: 'POST',
 		headers: {
 			'content-type': 'application/json',
@@ -29,9 +29,8 @@ export const sendGeneratedRoute = (data) => {
 	});
 }
 
-export const deleteRoute = (id) => {
-	const URL = `http://localhost:3000/delete-route/${id}`;
-	return axios(URL, {
+export const deleteRoute = id => {
+	return axios(URL + `/delete-route/${id}`, {
 		method: 'DELETE',
 		headers: {
 			'content-type': 'application/json',

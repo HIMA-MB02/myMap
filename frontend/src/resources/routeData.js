@@ -1,3 +1,4 @@
+//All lat and lng coordinates between baner and chichwad
 export const routeData = [
 	[73.7773, 18.56424],
 	[73.77737, 18.56423],

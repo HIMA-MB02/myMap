@@ -1,3 +1,9 @@
+/******************************************
+*	Name : ViewRoutes  
+*	Parent : App.jsx
+*	Children: DrawRoute.jsx
+*	Description : This components get's the list of all routes from backend, and maps it to DrawRoute.jsc
+*******************************************/
 import React, { useEffect, useState } from 'react';
 import { getListOfRoutes } from '../api/api'
 import DrawRoute from './DrawRoute'

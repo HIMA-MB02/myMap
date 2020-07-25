@@ -1,3 +1,9 @@
+/******************************************
+*	Name : DrawRoute  
+*	Parent : ViewRoutes.jsx
+*	Children: -
+*	Description : This component is responsible to trace the path of the track
+*******************************************/
 import React, { useEffect, useState, useRef, createRef } from 'react';
 import { Map, Marker, TileLayer, FeatureGroup } from 'react-leaflet'
 import L from 'leaflet'
@@ -17,10 +23,10 @@ const DrawRoute = ({ indexValue, track }) => {
 	const myMapRef = useRef(null);
 	let myGrpRef = createRef();
 	const [routes, setRoutes] = useState([])
+	
 	useEffect(() => {
 		setRoutes(track.trck)
 	}, [])
-
 	useEffect(() => {
 		if (myMapRef.current && myGrpRef.current) {
 			let map = myMapRef.current.leafletElement

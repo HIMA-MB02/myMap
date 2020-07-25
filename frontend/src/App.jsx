@@ -1,3 +1,9 @@
+/******************************************
+*	Name : App.jsx  
+*	Parent : index.js
+*	Children: CreateRoute.jsx, ViewRoutes.jsx
+*	Description : This component is responsible to for the MENU and Routing between CreateRoute.jsx and ViewRoutes.jsx
+*******************************************/
 import React from 'react';
 import CreateRoute from './components/CreateRoute'
 import ViewRoutes from './components/ViewRoutes'

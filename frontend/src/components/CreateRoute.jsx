@@ -1,3 +1,9 @@
+/******************************************
+*	Name : CreateRoute  
+*	Parent : App.jsx
+*	Children: -
+*	Description : Functions like Start, Stop, Reset and Generate Route are present here
+*******************************************/
 import React, { useEffect, useState, useRef } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import L from 'leaflet'
@@ -48,22 +54,18 @@ const CreateRoute = () => {
 		setMarkerPosition(newLocation)
 		setMarkerPath(oldPath => [...oldPath, newLocation])
 	}
-
 	const startRoute = () => {
 		let updateInterval = setInterval(updateCarLocation, 800)
 		setUpdateIntervalRef(updateInterval)
 	}
-
 	const stopRoute = () => {
 		clearInterval(updateIntervalRef);
 	}
-
 	const resetRoute = () => {
 		setCounter(0);
 		initialState();
 		stopRoute();
 	}
-
 	const generateRoute = () => {
 		if(markerPath.length <= 0) {
 			alert('Please start the journey first!')
@@ -82,6 +84,7 @@ const CreateRoute = () => {
 	const onMapChange = (viewport) => {
 		setMapZoom(viewport.zoom)
 	}
+	
 	return (
 		<div className="map-container">
 			<div className="container">
